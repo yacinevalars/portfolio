@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=1024">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
     <style>
         .welcome-banner {
             position: absolute;
@@ -261,9 +263,11 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #fafafa;
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0c1329, #2b3163, #4100ff);
             color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
         }
 
         a {
@@ -430,7 +434,6 @@
             border-radius: 15px;
             box-shadow: 0 0 20px #00d9ff;
             backdrop-filter: blur(5px);
-            animation: glow 3s ease-in-out infinite alternate;
         }
 
         .skills-list {
@@ -492,6 +495,7 @@
     .skills-list li {
         cursor: pointer;
         flex-direction: column;
+        align-items: flex-start;
         transition: 0.3s ease;
         padding: 10px 0;
     }
@@ -531,7 +535,7 @@
     }
     
     .toggle-all-button {
-    background-color: #0400ff;
+    background-color: #00bfff;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -615,7 +619,8 @@
   border-radius: 15px;
   padding: 20px;
   width: 220px;
-  height: 270px;
+  min-height: 270px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1203,6 +1208,273 @@ html {
 
 
 /*Fin loisirs */
+/* Début Veille technologique (bonus) */
+.veille-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #0c1329;
+  color: white;
+  border: 2px solid #00d9ff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00d9ff;
+  animation: sectionGlow 4s ease-in-out infinite;
+  margin: 40px auto;
+  max-width: 95%;
+  position: relative;
+  z-index: 0;
+  background: rgba(0, 0, 50, 0.4);
+}
+
+.veille-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  z-index: 2;
+  position: relative;
+}
+
+.veille-header h2 {
+  font-size: 2.5rem;
+  color: #00d9ff;
+  text-shadow: 0 0 10px #00d9ff;
+}
+
+.veille-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.veille-card {
+  background: rgba(0, 0, 50, 0.7);
+  border: 2px solid #00d9ff;
+  border-radius: 15px;
+  padding: 20px 25px;
+  text-align: left;
+  box-shadow: 0 0 12px #00d9ff, 0 0 24px #008cff;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.veille-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.veille-tag {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(0, 217, 255, 0.15);
+  border: 1px solid #00d9ff;
+  color: #00ffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.veille-card h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.veille-card p {
+  color: #b0d5ff;
+  font-size: 0.93rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.veille-source {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 217, 255, 0.25);
+  font-size: 0.85rem;
+}
+
+.veille-source span {
+  color: #8fb8e0;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.veille-card a {
+  color: #00ffff;
+  font-weight: 600;
+  border-bottom: 1px solid #00ffff;
+}
+
+@media (max-width: 768px) {
+  .veille-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fin Veille technologique */
+/* Début Technique (deep-dive développeurs) */
+.tech-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #0c1329;
+  color: white;
+  border: 2px solid #00d9ff;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #00d9ff;
+  animation: sectionGlow 4s ease-in-out infinite;
+  margin: 40px auto;
+  max-width: 95%;
+  position: relative;
+  z-index: 0;
+  background: rgba(0, 0, 50, 0.4);
+}
+
+.tech-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  z-index: 2;
+  position: relative;
+}
+
+.tech-header h2 {
+  font-size: 2.5rem;
+  color: #00d9ff;
+  text-shadow: 0 0 10px #00d9ff;
+}
+
+.tech-toggle-btn {
+  background-color: #00bfff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00bfff, 0 0 20px #008cff;
+  transition: background-color 0.3s;
+}
+
+.tech-toggle-btn:hover {
+  background-color: #0099cc;
+}
+
+.tech-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.tech-card {
+  width: 92%;
+  max-width: 900px;
+  background: rgba(0, 0, 50, 0.7);
+  border: 2px solid #00d9ff;
+  border-radius: 15px;
+  padding: 25px 30px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00d9ff, 0 0 24px #008cff;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  text-align: left;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.tech-card h3 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.tech-slogan {
+  color: #00ffff;
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.tech-stack-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.tech-tag {
+  background: rgba(0, 217, 255, 0.15);
+  border: 1px solid #00d9ff;
+  color: #00ffff;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.tech-description {
+  display: none;
+  font-size: 0.95rem;
+  color: #d7e9ff;
+  margin-top: 12px;
+  line-height: 1.7;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.tech-description strong {
+  color: #00ffff;
+}
+
+.tech-description code {
+  background: rgba(0, 217, 255, 0.12);
+  border: 1px solid rgba(0, 217, 255, 0.4);
+  color: #00ffff;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  font-family: 'Courier New', monospace;
+}
+
+/* Séparateur discret entre sous-parties d'un long texte */
+.mini-divider {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 14px 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, #00d9ff, transparent);
+  opacity: 0.6;
+}
+
+.tech-description ul {
+  margin: 6px 0 14px 0;
+  padding-left: 20px;
+}
+
+.tech-description li {
+  margin-bottom: 6px;
+  list-style: disc;
+}
+
+/* Fin Technique */
 /* Code pour l'affichage */
 @media (max-width: 768px) {
   body {
@@ -1270,7 +1542,8 @@ html {
         <img src="photo.jpg" alt="Ma Photo" class="photo-profil fade-in">
         <div class="name-block">
         <h1 class="name-title">Yacine AIT HAMI</h1>
-        <p class="job-title">Développeur Informatique</p>
+        <p class="job-title">Développeur Informatique — Alternant</p>
+        <p class="job-title">🎓 BUT Informatique — 3ᵉ année (2026), BUT1 &amp; BUT2 validés</p>
         </div>
         <a href="CV__Yacine__AIT-HAMI-.pdf" class="cv-button" download>Télécharger mon CV</a>
         <div class="ouverlay"></div>
@@ -1283,7 +1556,10 @@ html {
             <li><a href="#soft-skills">Soft-skills</a></li>
             <li><a href="#formations">Formations</a></li>
             <li><a href="#experiences">Expériences</a></li>
+            <li><a href="#entreprise">Entreprise</a></li>
+            <li><a href="#technique">Technique</a></li>
             <li><a href="#projets">Projets</a></li>
+            <li><a href="#veille">Veille techno</a></li>
             <li><a href="#loisirs">Loisirs</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1452,12 +1728,34 @@ html {
 
   <div class="timeline-container">
     <div class="timeline-item" onclick="toggleFormation(this)">
-      <div class="timeline-date">2024 – Aujourd’hui</div>
+      <div class="timeline-date">2026 – Aujourd’hui</div>
       <div class="timeline-content">
-        <h3>BUT Informatique</h3>
+        <h3>BUT Informatique — 3ᵉ année (en alternance, en cours)</h3>
         <p class="timeline-location">IUT de Villetaneuse – Université Sorbonne Paris Nord</p>
         <p class="timeline-description">
-          Au cours de ma formation à l’IUT de Villetaneuse – Université Sorbonne Paris Nord, j’ai acquis des compétences solides en développement orienté objet, conception d’interfaces intuitives et ergonomiques, ainsi qu’en modélisation de graphes pour l’optimisation des données. J’ai exploré la conception de bases de données performantes, la compréhension des systèmes d’exploitation et l’assurance qualité logicielle. Ces enseignements m’ont permis de développer une approche rigoureuse et créative, avec un esprit critique pour concevoir des solutions fiables et innovantes.
+          Après avoir validé mon BUT2 Informatique, je poursuis ma 3ᵉ année en alternance. J’y approfondis la conception d’architectures logicielles robustes, le développement full-stack (API, bases de données, front-end) et la qualité logicielle. L’alternance me permet de confronter ces enseignements à des projets métier réels, avec des exigences de production (sécurité, tests, observabilité, dette technique).
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item" onclick="toggleFormation(this)">
+      <div class="timeline-date">2025 – 2026</div>
+      <div class="timeline-content">
+        <h3>BUT Informatique — 2ᵉ année (validée)</h3>
+        <p class="timeline-location">IUT de Villetaneuse – Université Sorbonne Paris Nord</p>
+        <p class="timeline-description">
+          Année validée avec la réalisation d’une SAE d’envergure : conception et développement d’une application web full-stack de A à Z (backend Java/Spring Boot, frontend React/TypeScript, base PostgreSQL, Docker, tests end-to-end). J’ai également acquis des compétences solides en développement orienté objet, conception d’interfaces intuitives et ergonomiques, ainsi qu’en modélisation de graphes pour l’optimisation des données.
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item" onclick="toggleFormation(this)">
+      <div class="timeline-date">2024 – 2025</div>
+      <div class="timeline-content">
+        <h3>BUT Informatique — 1ère année (validée)</h3>
+        <p class="timeline-location">IUT de Villetaneuse – Université Sorbonne Paris Nord</p>
+        <p class="timeline-description">
+          Première année validée, avec l’acquisition des bases du développement informatique : programmation orientée objet, algorithmique, bases de données relationnelles, systèmes d’exploitation, ainsi que des premiers projets de développement web et d’administration système Linux.
         </p>
       </div>
     </div>
@@ -1497,6 +1795,17 @@ html {
 
   <div class="experience-container">
     <div class="experience-card" onclick="toggleExperience(this)">
+      <h3>🧑‍💻 Alternant Développeur .NET — depuis 2025</h3>
+      <p class="experience-slogan">Développement d’applications métier full-stack en Clean Architecture</p>
+      <p class="experience-description">
+        Dans le cadre de ma 3ᵉ année de BUT Informatique, je suis actuellement en alternance en tant que développeur .NET au sein d'une entreprise, où je contribue à des applications métier internes développées en Clean Architecture (API REST, base de données, interface web, traitements asynchrones).
+        <br><br>
+        Cette expérience m’a permis de monter en compétence sur des sujets avancés (architecture logicielle, sécurité, observabilité, qualité) tout en développant mon autonomie dans un contexte professionnel exigeant. Pour des raisons de confidentialité, je reste volontairement général sur la nature de ces projets.
+        <br><br>
+        👉 <a href="#entreprise" onclick="event.stopPropagation(); event.preventDefault(); showTab('entreprise');" style="color:#00ffff; text-decoration: underline;">Voir le détail de mes compétences mises en œuvre</a>
+      </p>
+    </div>
+    <div class="experience-card" onclick="toggleExperience(this)">
       <h3>Stage en entreprise</h3>
       <p class="experience-slogan">Une première immersion dans le monde professionnel</p>
       <p class="experience-description">
@@ -1513,6 +1822,229 @@ html {
 
 <!-- Fin Expérience-->
 
+<!-- Début Entreprise (détail alternance — contenu volontairement général pour respecter la confidentialité) -->
+<section id="entreprise" class="experience-section">
+  <div class="experience-header">
+    <h2>Mon Alternance en Entreprise</h2>
+    <button class="experience-toggle-btn" onclick="toggleAllExperience()">Afficher les détails</button>
+  </div>
+  <p style="color:#b0d5ff; max-width: 800px; margin: -20px auto 30px; font-size: 1.05rem;">
+    Par souci de confidentialité vis-à-vis de mon entreprise d’accueil, je ne présente ni le nom, ni la finalité métier des projets sur lesquels j’interviens. Voici en revanche mon rôle et les compétences techniques que j’y mets en œuvre au quotidien.
+  </p>
+
+  <div class="experience-container">
+    <div class="experience-card" onclick="toggleExperience(this)" style="width: 90%; max-width: 800px; min-height: 220px;">
+      <h3>🧑‍💻 Développeur .NET en alternance</h3>
+      <p class="experience-slogan">Contribution à des applications métier internes, de la conception à la mise en production</p>
+      <p class="experience-description">
+        <strong>🎯 Mon rôle</strong><br>
+        J’interviens sur des applications web internes destinées à un usage professionnel, en binôme avec des développeurs expérimentés : rédaction de spécifications fonctionnelles et techniques avant développement, conception de fonctionnalités, développement backend et frontend, écriture de tests, participation aux revues de code et aux points d’architecture.
+        <span class="mini-divider"></span>
+        <strong>🛠️ Technologies &amp; pratiques mises en œuvre</strong><br>
+        Écosystème .NET moderne (C#, architectures en couches type Clean Architecture), API REST sécurisées, bases de données relationnelles (SQL Server / PostgreSQL) avec Entity Framework Core, interfaces web avec Blazor, authentification et gestion des droits d’accès, traitements asynchrones planifiés, génération de documents. Mise en place d’une chaîne d’intégration et de déploiement continus (CI/CD), d’une observabilité applicative avec OpenTelemetry (traces, métriques) et d’une suite de tests automatisés à plusieurs niveaux (unitaires, intégration, end-to-end).
+        <span class="mini-divider"></span>
+        <strong>✅ Compétences développées</strong><br>
+        • Rédaction de spécifications fonctionnelles et techniques (démarche de spécification avant codage) pour cadrer une fonctionnalité avant son développement.<br>
+        • Conception d’architectures logicielles modulaires et maintenables.<br>
+        • Sécurisation d’API (authentification, gestion fine des droits d’accès).<br>
+        • Modélisation et manipulation de données relationnelles à l’échelle d’une application métier.<br>
+        • Mise en place de traitements en arrière-plan et de génération automatisée de documents.<br>
+        • Mise en œuvre de pipelines <strong>CI/CD</strong> (build, tests, déploiement automatisés) pour fiabiliser les livraisons.<br>
+        • Instrumentation d’applications avec <strong>OpenTelemetry</strong> pour le traçage distribué et le suivi des performances en production.<br>
+        • Pratique du travail en équipe de développement : revues de code, tests automatisés, suivi de qualité.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Fin Entreprise -->
+
+<!-- Début Technique (deep-dive pour développeurs / recruteurs techniques) -->
+<section id="technique" class="tech-section">
+  <div class="tech-header">
+    <h2>Détails Techniques</h2>
+    <button class="tech-toggle-btn" onclick="toggleAllTech()">Afficher les détails</button>
+  </div>
+  <p style="color:#b0d5ff; max-width: 800px; margin: 0 auto 30px; font-size: 1.05rem;">
+    Une vue technique, pensée pour les développeurs et recruteurs techniques : architecture, patterns et choix d’implémentation. Pour les projets réalisés en entreprise, je reste volontairement général sur le contexte métier (confidentialité) et me concentre sur les aspects techniques.
+  </p>
+
+  <div class="tech-container">
+    <div class="tech-card" onclick="toggleTech(this)">
+      <h3>🧑‍💻 Alternance — Architecture &amp; implémentation (contexte anonymisé)</h3>
+      <p class="tech-slogan">.NET · Clean Architecture · API REST · Blazor · CI/CD · OpenTelemetry</p>
+      <div class="tech-stack-line">
+        <span class="tech-tag">C# / .NET</span>
+        <span class="tech-tag">API REST</span>
+        <span class="tech-tag">EF Core</span>
+        <span class="tech-tag">SQL Server / PostgreSQL</span>
+        <span class="tech-tag">Blazor</span>
+        <span class="tech-tag">Autorisation par politiques</span>
+        <span class="tech-tag">Jobs asynchrones</span>
+        <span class="tech-tag">OpenTelemetry</span>
+        <span class="tech-tag">CI/CD</span>
+        <span class="tech-tag">Spécifications techniques</span>
+      </div>
+
+      <div style="text-align:center; margin: 15px 0 20px;">
+        <svg viewBox="0 0 600 260" style="width:100%; max-width:560px; height:auto;" role="img" aria-label="Schéma en couches de la Clean Architecture">
+          <rect x="10" y="10" width="580" height="240" rx="14" fill="rgba(0,0,50,0.35)" stroke="#00d9ff" stroke-width="2"/>
+          <text x="300" y="34" text-anchor="middle" fill="#00d9ff" font-size="15" font-weight="700">API / PRÉSENTATION (Blazor, endpoints REST)</text>
+
+          <rect x="45" y="50" width="510" height="170" rx="12" fill="rgba(0,0,50,0.45)" stroke="#00bfff" stroke-width="2"/>
+          <text x="300" y="72" text-anchor="middle" fill="#00bfff" font-size="14" font-weight="700">APPLICATION (cas d’usage, validation)</text>
+
+          <rect x="150" y="88" width="300" height="90" rx="10" fill="rgba(0,217,255,0.12)" stroke="#00ffff" stroke-width="2"/>
+          <text x="300" y="118" text-anchor="middle" fill="#00ffff" font-size="14" font-weight="700">DOMAIN</text>
+          <text x="300" y="140" text-anchor="middle" fill="#d7e9ff" font-size="11">Entités métier</text>
+          <text x="300" y="156" text-anchor="middle" fill="#d7e9ff" font-size="11">Aucune dépendance externe</text>
+
+          <rect x="470" y="88" width="105" height="90" rx="10" fill="rgba(0,0,50,0.6)" stroke="#00d9ff" stroke-width="2" stroke-dasharray="4 3"/>
+          <text x="522" y="112" text-anchor="middle" fill="#00d9ff" font-size="11" font-weight="700">INFRA-</text>
+          <text x="522" y="126" text-anchor="middle" fill="#00d9ff" font-size="11" font-weight="700">STRUCTURE</text>
+          <text x="522" y="146" text-anchor="middle" fill="#b0d5ff" font-size="9">BDD, mailing,</text>
+          <text x="522" y="158" text-anchor="middle" fill="#b0d5ff" font-size="9">reporting…</text>
+
+          <line x1="470" y1="133" x2="452" y2="133" stroke="#00ffff" stroke-width="2" marker-end="url(#arrowhead)"/>
+          <text x="461" y="122" text-anchor="middle" fill="#00ffff" font-size="8">implémente</text>
+
+          <text x="300" y="205" text-anchor="middle" fill="#8fb8e0" font-size="10" font-style="italic">Les dépendances pointent vers l’intérieur : Domain ne dépend de rien.</text>
+
+          <defs>
+            <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#00ffff"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <div style="text-align:center; margin: 15px 0 20px;">
+        <svg viewBox="0 0 640 140" style="width:100%; max-width:600px; height:auto;" role="img" aria-label="Schéma du pipeline CI/CD, de la spécification à l'observabilité en production">
+          <line x1="60" y1="60" x2="580" y2="60" stroke="#00d9ff" stroke-width="2" stroke-dasharray="3 4" opacity="0.5"/>
+          <g font-size="10.5" font-weight="700">
+            <rect x="20" y="35" width="80" height="50" rx="8" fill="rgba(0,217,255,0.12)" stroke="#00ffff" stroke-width="2"/>
+            <text x="60" y="55" text-anchor="middle" fill="#00ffff">SPEC</text>
+            <text x="60" y="70" text-anchor="middle" fill="#b0d5ff" font-size="8" font-weight="400">besoin défini</text>
+
+            <rect x="135" y="35" width="80" height="50" rx="8" fill="rgba(0,0,50,0.45)" stroke="#00bfff" stroke-width="2"/>
+            <text x="175" y="55" text-anchor="middle" fill="#00bfff">CODE</text>
+            <text x="175" y="70" text-anchor="middle" fill="#b0d5ff" font-size="8" font-weight="400">+ tests unitaires</text>
+
+            <rect x="250" y="35" width="80" height="50" rx="8" fill="rgba(0,0,50,0.45)" stroke="#00bfff" stroke-width="2"/>
+            <text x="290" y="55" text-anchor="middle" fill="#00bfff">CI</text>
+            <text x="290" y="70" text-anchor="middle" fill="#b0d5ff" font-size="8" font-weight="400">build + tests auto</text>
+
+            <rect x="365" y="35" width="80" height="50" rx="8" fill="rgba(0,0,50,0.45)" stroke="#00bfff" stroke-width="2"/>
+            <text x="405" y="55" text-anchor="middle" fill="#00bfff">CD</text>
+            <text x="405" y="70" text-anchor="middle" fill="#b0d5ff" font-size="8" font-weight="400">déploiement auto</text>
+
+            <rect x="480" y="35" width="120" height="50" rx="8" fill="rgba(0,217,255,0.12)" stroke="#00ffff" stroke-width="2"/>
+            <text x="540" y="52" text-anchor="middle" fill="#00ffff" font-size="10">OBSERVABILITÉ</text>
+            <text x="540" y="67" text-anchor="middle" fill="#b0d5ff" font-size="8" font-weight="400">OpenTelemetry</text>
+          </g>
+          <g stroke="#00ffff" stroke-width="2" fill="none" marker-end="url(#arrowhead3)">
+            <line x1="100" y1="60" x2="132" y2="60"/>
+            <line x1="215" y1="60" x2="247" y2="60"/>
+            <line x1="330" y1="60" x2="362" y2="60"/>
+            <line x1="445" y1="60" x2="477" y2="60"/>
+          </g>
+          <text x="320" y="115" text-anchor="middle" fill="#8fb8e0" font-size="10" font-style="italic">Boucle courte : chaque livraison est buildée, testée et déployée automatiquement, puis observée en production.</text>
+          <defs>
+            <marker id="arrowhead3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#00ffff"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <p class="tech-description">
+        <strong>Architecture</strong><br>
+        Les applications sur lesquelles j’interviens sont structurées en <strong>Clean Architecture</strong> : une couche <em>Domain</em> contenant les entités métier sans dépendance externe, une couche <em>Infrastructure</em> regroupant l’accès aux données et les services techniques, et une couche <em>API/Présentation</em> exposant les fonctionnalités. Les endpoints REST suivent une organisation en <em>vertical slices</em> (une fonctionnalité = une unité auto-contenue avec sa requête, sa validation et sa réponse), avec un contrat d’API documenté (OpenAPI/Swagger) et un client typé généré automatiquement pour le frontend — l’objectif étant d’éviter toute duplication manuelle de DTO entre back et front. Chaque fonctionnalité importante démarre par une phase de <strong>spécification</strong> (rédaction d’un document de spec technique/fonctionnelle) avant le développement, pour clarifier le besoin et les critères d’acceptation.
+        <span class="mini-divider"></span>
+        <strong>Qualité, intégration &amp; observabilité</strong><br>
+        Les livraisons passent par une chaîne de <strong>CI/CD</strong> : build automatisé, exécution de la suite de tests, et déploiement automatisé — ce qui réduit les erreurs manuelles et fiabilise la mise en production. Les applications sont instrumentées avec <strong>OpenTelemetry</strong> pour générer des traces distribuées et des métriques, complétées par des logs structurés, permettant de diagnostiquer un incident en production et de suivre les performances dans le temps.
+        <span class="mini-divider"></span>
+        <strong>Compétences techniques mobilisées</strong>
+        <ul>
+          <li>Rédaction de spécifications techniques/fonctionnelles avant développement.</li>
+          <li>Persistance de données relationnelles avec <code>Entity Framework Core</code>, migrations, modélisation de schémas.</li>
+          <li>Mise en place d’une autorisation fine par politiques (contrôle d’accès basé sur les rôles/attributs).</li>
+          <li>Développement d’interfaces web avec <code>Blazor</code> (composants réutilisables, gestion d’état).</li>
+          <li>Traitements asynchrones planifiés (jobs en arrière-plan) pour des tâches longues ou différées.</li>
+          <li>Génération de documents (export PDF/CSV) et automatisation d’imports de données.</li>
+          <li>Mise en place de pipelines <strong>CI/CD</strong> (build, tests, déploiement automatisés).</li>
+          <li>Instrumentation applicative avec <strong>OpenTelemetry</strong> (traces distribuées, métriques) et logs structurés.</li>
+          <li>Tests automatisés avec une approche comportementale (scénarios <em>Given/When/Then</em>).</li>
+        </ul>
+      </p>
+    </div>
+
+    <div class="tech-card" onclick="toggleTech(this)">
+      <h3>📚 LearnHub (SAE BUT2) — Architecture &amp; implémentation</h3>
+      <p class="tech-slogan">Java 17 / Spring Boot · React 19 / TypeScript · PostgreSQL · Docker</p>
+      <div class="tech-stack-line">
+        <span class="tech-tag">Spring Boot 3</span>
+        <span class="tech-tag">Spring Security + JWT</span>
+        <span class="tech-tag">Spring Data JPA</span>
+        <span class="tech-tag">React 19 + Vite</span>
+        <span class="tech-tag">TanStack Query</span>
+        <span class="tech-tag">Zustand</span>
+        <span class="tech-tag">Docker</span>
+        <span class="tech-tag">Playwright</span>
+      </div>
+
+      <div style="text-align:center; margin: 15px 0 20px;">
+        <svg viewBox="0 0 600 200" style="width:100%; max-width:560px; height:auto;" role="img" aria-label="Schéma des flux entre le frontend React, l'API Spring Boot et la base PostgreSQL">
+          <rect x="15" y="55" width="150" height="90" rx="12" fill="rgba(0,217,255,0.12)" stroke="#00ffff" stroke-width="2"/>
+          <text x="90" y="90" text-anchor="middle" fill="#00ffff" font-size="14" font-weight="700">FRONTEND</text>
+          <text x="90" y="108" text-anchor="middle" fill="#d7e9ff" font-size="11">React 19 / TypeScript</text>
+          <text x="90" y="124" text-anchor="middle" fill="#b0d5ff" font-size="10">Vite · TanStack Query</text>
+
+          <rect x="225" y="40" width="150" height="120" rx="12" fill="rgba(0,0,50,0.45)" stroke="#00bfff" stroke-width="2"/>
+          <text x="300" y="70" text-anchor="middle" fill="#00bfff" font-size="14" font-weight="700">API</text>
+          <text x="300" y="88" text-anchor="middle" fill="#d7e9ff" font-size="11">Spring Boot 3</text>
+          <text x="300" y="104" text-anchor="middle" fill="#b0d5ff" font-size="10">Archi. hexagonale</text>
+          <text x="300" y="120" text-anchor="middle" fill="#b0d5ff" font-size="10">JWT · Spring Security</text>
+          <text x="300" y="140" text-anchor="middle" fill="#b0d5ff" font-size="10">OpenAPI ↔ types TS</text>
+
+          <rect x="435" y="55" width="150" height="90" rx="12" fill="rgba(0,0,50,0.35)" stroke="#00d9ff" stroke-width="2"/>
+          <text x="510" y="90" text-anchor="middle" fill="#00d9ff" font-size="14" font-weight="700">DONNÉES</text>
+          <text x="510" y="108" text-anchor="middle" fill="#d7e9ff" font-size="11">PostgreSQL</text>
+          <text x="510" y="124" text-anchor="middle" fill="#b0d5ff" font-size="10">Spring Data JPA</text>
+
+          <line x1="165" y1="100" x2="225" y2="100" stroke="#00ffff" stroke-width="2" marker-end="url(#arrowhead2)" marker-start="url(#arrowhead2start)"/>
+          <line x1="375" y1="100" x2="435" y2="100" stroke="#00d9ff" stroke-width="2" marker-end="url(#arrowhead2)" marker-start="url(#arrowhead2start)"/>
+
+          <text x="300" y="185" text-anchor="middle" fill="#8fb8e0" font-size="10" font-style="italic">Conteneurisé avec Docker · types générés depuis le contrat OpenAPI</text>
+
+          <defs>
+            <marker id="arrowhead2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#00ffff"/>
+            </marker>
+            <marker id="arrowhead2start" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#00ffff"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <p class="tech-description">
+        <strong>Backend</strong><br>
+        API REST en <code>Java 17</code> / <code>Spring Boot 3.4</code>, architecture en couches inspirée de l’hexagonale (API / Application / Domain / Infrastructure) avec inversion de dépendances — les interfaces de repository vivent dans le domaine, leurs implémentations en infrastructure. Authentification par <code>JWT</code> (access + refresh token via <code>jjwt</code>) avec filtre <code>Spring Security</code> custom, persistance <code>PostgreSQL</code> via <code>Spring Data JPA</code> (H2 pour les tests d’intégration). Documentation d’API avec <code>springdoc-openapi</code> / Swagger.
+        <span class="mini-divider"></span>
+        <strong>Frontend</strong><br>
+        SPA <code>React 19</code> / <code>TypeScript</code> construite avec <code>Vite</code> et <code>Material UI</code>, routing <code>React Router v7</code>. Gestion d’état séparée entre <strong>server state</strong> (<code>TanStack Query</code>) et <strong>état client</strong> (<code>Zustand</code>), formulaires typés avec <code>React Hook Form</code> + <code>Zod</code>, appels HTTP via <code>Axios</code> avec intercepteur de refresh automatique sur 401. Les types TypeScript sont générés directement depuis le contrat OpenAPI du backend (<code>openapi-typescript</code>) pour garantir la cohérence front/back.
+        <ul>
+          <li>Modules développés : cours/chapitres/ressources pédagogiques, inscriptions et suivi de progression élève, workflow de demande de compte avec validation admin, messagerie interne et signalement de contenu.</li>
+          <li>Infra : conteneurisation multi-services avec <code>Docker</code> / <code>docker-compose</code> (API + PostgreSQL + Mailpit pour les emails en dev).</li>
+          <li>Tests : unitaires <code>Vitest</code> + <code>React Testing Library</code> côté front, tests d’intégration Spring Boot sur H2 côté back, end-to-end <code>Playwright</code> sur les parcours critiques (login, gestion de cours, apprentissage élève).</li>
+        </ul>
+        <span class="mini-divider"></span>
+        Code source public : <a href="https://github.com/EEEmryc/SAE_BUT2" target="_blank" style="color:#00ffff; text-decoration: underline;">github.com/EEEmryc/SAE_BUT2</a>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Fin Technique -->
 
         <section id="projets" class="project-section">
   <div class="project-header">
@@ -1573,9 +2105,88 @@ html {
       <p class="project-description">Programmation en C d’un feu tricolore intelligent avec Arduino, temporisation, boucle conditionnelle et capteurs de présence simulés.</p>
     </div>
   </div>
+
+  <!-- Ligne 3 : Alternance & BUT3 -->
+  <div class="project-line">
+    <div class="project-card" onclick="toggleProject(this)" style="width: 260px;">
+      <h3>🧑‍💻 Projets en alternance</h3>
+      <p class="project-slogan">Applications métier internes en .NET</p>
+      <p class="project-description">
+        Par confidentialité, je ne détaille pas le nom ni la finalité métier des projets réalisés en entreprise. Clean Architecture en .NET, API REST, bases de données relationnelles, Blazor, autorisation par politiques, traitements asynchrones.
+        <br><br>
+        👉 <a href="#entreprise" onclick="event.stopPropagation(); event.preventDefault(); showTab('entreprise');" style="color:#00ffff; text-decoration: underline;">Voir mon rôle en détail</a> ·
+        <a href="#technique" onclick="event.stopPropagation(); event.preventDefault(); showTab('technique');" style="color:#00ffff; text-decoration: underline;">Voir le détail technique</a>
+      </p>
+    </div>
+
+    <div class="project-card" onclick="toggleProject(this)">
+      <h3>📚 LearnHub (SAE BUT2)</h3>
+      <p class="project-slogan">Plateforme e-learning full-stack de A à Z</p>
+      <p class="project-description">Cours, chapitres, progression élève, messagerie et administration des comptes. Backend Java 17 / Spring Boot (API REST JWT, PostgreSQL), frontend React 19 / TypeScript (Vite, Material UI, TanStack Query), Docker, tests end-to-end Playwright.</p>
+    </div>
+  </div>
 </section>
 
+<!-- Début Veille technologique (bonus) -->
+<section id="veille" class="veille-section">
+  <div class="veille-header">
+    <h2>Veille Technologique</h2>
+  </div>
+  <p style="color:#b0d5ff; max-width: 800px; margin: 0 auto 30px; font-size: 1.05rem;">
+    Quelques évolutions du monde informatique que je suis de près, et ce qu’elles signifient pour moi en tant que futur développeur.
+  </p>
 
+  <div class="veille-container">
+    <div class="veille-card">
+      <span class="veille-tag">Intelligence artificielle</span>
+      <h3>🤖 Les agents IA changent la façon de coder</h3>
+      <p>
+        Les assistants et agents IA (autocomplétion avancée, génération de tests, revue de code assistée) sont en train de transformer le métier de développeur, pas seulement de l’accélérer. Ce qui m’intéresse, ce n’est pas tant l’outil que ce qu’il déplace : savoir cadrer une tâche pour un agent, relire son code avec un œil critique et rester capable de comprendre ce qui a été produit deviennent des compétences aussi importantes que savoir coder soi-même.
+      </p>
+      <div class="veille-source">
+        <span>🔗 Source :</span>
+        <a href="https://github.blog/ai-and-ml/" target="_blank">github.blog/ai-and-ml</a>
+      </div>
+    </div>
+
+    <div class="veille-card">
+      <span class="veille-tag">Sécurité</span>
+      <h3>🔗 Les attaques par la chaîne d’approvisionnement logicielle</h3>
+      <p>
+        De plus en plus d’incidents de sécurité ne viennent plus d’une faille dans son propre code, mais d’une dépendance (librairie, package npm/NuGet) compromise en amont. En travaillant sur des applications qui manipulent des données sensibles, ça me pousse à rester vigilant sur les dépendances que j’intègre, et pas seulement sur le code que j’écris moi-même.
+      </p>
+      <div class="veille-source">
+        <span>🔗 Source :</span>
+        <a href="https://owasp.org/www-project-top-ten/" target="_blank">owasp.org/www-project-top-ten</a>
+      </div>
+    </div>
+
+    <div class="veille-card">
+      <span class="veille-tag">Écosystème .NET</span>
+      <h3>⚙️ Le rythme annuel des versions de .NET</h3>
+      <p>
+        Microsoft publie une nouvelle version majeure de .NET chaque année, avec un cycle de support long/court en alternance (LTS/STS). Travaillant au quotidien dans cet écosystème, je suis les nouveautés de chaque version (performance, nouvelles API) pour savoir quand et pourquoi migrer un projet, plutôt que de rester par défaut sur une version ancienne.
+      </p>
+      <div class="veille-source">
+        <span>🔗 Source :</span>
+        <a href="https://dotnet.microsoft.com/" target="_blank">dotnet.microsoft.com</a>
+      </div>
+    </div>
+
+    <div class="veille-card">
+      <span class="veille-tag">Langages</span>
+      <h3>🦀 La montée des langages "memory-safe" (Rust)</h3>
+      <p>
+        Plusieurs grands acteurs (dont des agences gouvernementales) recommandent désormais de privilégier des langages qui éliminent par construction certaines failles mémoire (comme Rust), en particulier pour les systèmes critiques. Je trouve ce mouvement intéressant à suivre même sans coder en Rust au quotidien : il rappelle que le choix d’un langage est aussi un choix de sécurité, pas seulement de productivité.
+      </p>
+      <div class="veille-source">
+        <span>🔗 Source :</span>
+        <a href="https://www.rust-lang.org/" target="_blank">rust-lang.org</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Fin Veille technologique -->
 
         <section id="loisirs" class="loisirs-section">
   <div class="loisirs-header">
@@ -1632,7 +2243,7 @@ html {
     </main>
 
     <footer>
-        <p>&copy; 2025 Yacine AIT HAMI. Tous droits réservés.</p>
+        <p>&copy; 2026 Yacine AIT HAMI. Tous droits réservés.</p>
     </footer>
     <script>
         /*Hard-Skils */
@@ -1795,7 +2406,75 @@ function toggleAllLoisirs() {
 }
 
 /* Fin Loisirs */
+/* début Technique */
+function toggleTech(card) {
+  const desc = card.querySelector(".tech-description");
+  if (desc) {
+    desc.style.display = (desc.style.display === "block") ? "none" : "block";
+  }
+}
 
+function toggleAllTech() {
+  const allDescriptions = document.querySelectorAll(".tech-description");
+  const allVisible = [...allDescriptions].every(p => p.style.display === "block");
+
+  allDescriptions.forEach(p => {
+    p.style.display = allVisible ? "none" : "block";
+  });
+
+  const btn = document.querySelector(".tech-toggle-btn");
+  if (btn) {
+    btn.textContent = allVisible ? "Afficher les détails" : "Masquer les détails";
+  }
+}
+/* Fin Technique */
+
+</script>
+
+<script>
+    /* ===== Navigation par onglets (pas de défilement entre sections) ===== */
+    (function () {
+        const tabIds = [
+            "accueil", "hard-skills", "soft-skills", "formations",
+            "experiences", "entreprise", "technique", "projets",
+            "veille", "loisirs", "contact"
+        ];
+        const navLinks = document.querySelectorAll(".navbar a[href^='#']");
+        const mainEl = document.querySelector("main");
+        const footerEl = document.querySelector("footer");
+
+        window.showTab = function showTab(targetId) {
+            tabIds.forEach(function (id) {
+                const el = document.getElementById(id);
+                if (!el) return;
+                el.style.display = (id === targetId) ? "" : "none";
+            });
+            // Le contenu d'accueil vit entièrement dans le <header> : on masque
+            // <main> et le footer pour éviter d'afficher un bloc vide en dessous.
+            if (mainEl) {
+                mainEl.style.display = (targetId === "accueil") ? "none" : "block";
+            }
+            if (footerEl) {
+                footerEl.style.display = (targetId === "accueil") ? "none" : "block";
+            }
+            navLinks.forEach(function (link) {
+                const linkId = link.getAttribute("href").replace("#", "");
+                link.classList.toggle("active-link", linkId === targetId);
+            });
+            window.scrollTo(0, 0);
+        }
+
+        navLinks.forEach(function (link) {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                const targetId = link.getAttribute("href").replace("#", "");
+                showTab(targetId);
+            });
+        });
+
+        // Onglet affiché par défaut au chargement
+        showTab("accueil");
+    })();
 </script>
 </body>
 </html>
