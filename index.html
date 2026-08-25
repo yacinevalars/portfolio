@@ -281,7 +281,8 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            height: 100vh;
+            min-height: 100vh;
+            height: auto;
         }
 
         .welcome-message {
@@ -319,7 +320,7 @@
                .cv-button {
     display: block;
     margin: 20px auto;
-    background-color: #00d9ff;
+    background-color: #14145c;
     color: white;
     padding: 12px 25px;
     border-radius: 8px;
@@ -333,7 +334,7 @@
 }
 
 .cv-button:hover {
-    background-color: #008cff;
+    background-color: #23238f;
     box-shadow: 0 0 15px #00ffff, 0 0 30px #00bfff;
 }
 
@@ -532,6 +533,20 @@
         font-size: 1.2rem;
         color: #b0d5ff;
         text-shadow: 0 0 5px #00bfff;
+    }
+
+    .home-accroche {
+        max-width: 650px;
+        margin: 22px auto 0;
+        font-size: 1.08rem;
+        line-height: 1.7;
+        color: #e8f4ff;
+        background: rgba(0, 10, 50, 0.55);
+        border-left: 3px solid #00d9ff;
+        border-radius: 8px;
+        padding: 16px 22px;
+        text-align: left;
+        backdrop-filter: blur(3px);
     }
     
     .toggle-all-button {
@@ -1540,12 +1555,18 @@ html {
         <h1 class="welcome-highlight">Bienvenue dans mon univers numérique !</h1>
         </div>
         <img src="photo.jpg" alt="Ma Photo" class="photo-profil fade-in">
+
+        <a href="CV__Yacine__AIT-HAMI-.pdf" class="cv-button" download>Télécharger mon CV</a>
+
         <div class="name-block">
         <h1 class="name-title">Yacine AIT HAMI</h1>
         <p class="job-title">Développeur Informatique — Alternant</p>
         <p class="job-title">🎓 BUT Informatique — 3ᵉ année (2026), BUT1 &amp; BUT2 validés</p>
         </div>
-        <a href="CV__Yacine__AIT-HAMI-.pdf" class="cv-button" download>Télécharger mon CV</a>
+
+        <p class="home-accroche">
+          Avant de parcourir mon parcours, mes compétences et mes projets, laissez-moi me présenter en quelques mots. Ce qui m’a amené à l’informatique, c’est ce moment précis où un problème complexe se transforme, ligne après ligne, en une solution qui fonctionne. Depuis, j’essaie de garder cette curiosité intacte : comprendre en profondeur avant de coder, et ne jamais me satisfaire d’une solution qui « marche » sans savoir pourquoi. Mon alternance m’a appris qu’un bon développeur n’est pas seulement celui qui écrit du code, mais celui qui sait poser les bonnes questions avant. Ce portfolio retrace ce parcours — mes formations, mes compétences, mes projets — et j’espère qu’il vous donnera un aperçu sincère de qui je suis, avant même de me rencontrer.
+        </p>
         <div class="ouverlay"></div>
     </header>
 
